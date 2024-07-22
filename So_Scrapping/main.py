@@ -4,7 +4,7 @@ if __name__ == '__main__':
     url = 'https://stackoverflow.com/questions?tab=newest&pagesize=50'
     scrapper = Scrapping(url)
 
-    if scrapper.get_response() == 200:
+    if str(scrapper.get_response()) == '<Response [200]>':
 
         scrapper.get_soup()
 
@@ -12,10 +12,10 @@ if __name__ == '__main__':
 
         scrapper.add_data(data)
         
-        for i in range(1, 99):
+        for i in range(1, 10):
             j = str(i+1)
             print('scrapping page ', j)
-            url = 'https://stackoverflow.com/questjons?tab=newest&page=' + j
+            url = 'https://stackoverflow.com/questions?tab=newest&page=' + j
             scrapper = Scrapping(url)
             scrapper.get_response()
             scrapper.get_soup()
