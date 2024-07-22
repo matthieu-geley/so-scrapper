@@ -61,7 +61,7 @@ class Scrapping():
         """
         :return: mongodb collection object
         """
-        client = pymongo.MongoClient('mongodb://localhost:27017/')
+        client = pymongo.MongoClient('localhost:27017')
         db = client['stackoverflow']
         collection = db['so_scrapper']
         return collection
