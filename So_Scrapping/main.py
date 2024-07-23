@@ -30,8 +30,9 @@ if __name__ == '__main__':
 
         scrapper.add_data(data)
 
+        threads = []
         for i in range(1, 100):
-
+            
             thread = threading.Thread(target=scrape_page, args=(i, scrapper))
             threads.append(thread)
             thread.start()
