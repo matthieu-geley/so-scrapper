@@ -13,6 +13,7 @@ def test_get_articles():
     articles = scrapper.get_articles()
     if articles is not None:
         print('Articles are not None')
+        print(articles[0])
     else:
         print('Articles are None')
 
